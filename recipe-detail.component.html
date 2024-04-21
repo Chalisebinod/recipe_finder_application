@@ -1,0 +1,23 @@
+<div *ngIf="recipe">
+  <h2>{{ recipe.title }}</h2>
+  <div>
+    <img [src]="recipe.imageUrl" alt="{{ recipe.title }}">
+  </div>
+  <div>
+    <h3>Ingredients</h3>
+    <ul>
+      <li *ngFor="let ingredient of recipe.ingredients">{{ ingredient }}</li>
+    </ul>
+  </div>
+  <div>
+    <h3>Instructions</h3>
+    <ol>
+      <li *ngFor="let instruction of recipe.instructions">{{ instruction }}</li>
+    </ol>
+  </div>
+  <div>
+    <h3>Nutritional Facts</h3>
+    <p>Calories: {{ recipe.nutrition.calories }}</p>
+    <!-- Display other nutritional facts here -->
+  </div>
+</div>

@@ -1,0 +1,8 @@
+<div>
+  <h2>Recipe List</h2>
+  <input type="text" [(ngModel)]="searchTerm" placeholder="Search Recipes">
+  <div *ngFor="let recipe of filteredRecipes | async">
+    <h3 (click)="gotoDetail(recipe)">{{ recipe.title }}</h3>
+    <p>{{ recipe.description }}</p>
+  </div>
+</div>
